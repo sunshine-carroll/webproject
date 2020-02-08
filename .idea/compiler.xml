@@ -7,12 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="api" />
-        <module name="modeling-computation" />
         <module name="dependency" />
         <module name="common-util" />
         <module name="common-verify" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="modeling-computation" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

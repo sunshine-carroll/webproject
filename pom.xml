@@ -13,6 +13,8 @@
     <module>common-verify</module>
     <module>modeling-computation</module>
     <module>dependency</module>
+      <module>service</module>
+    <module>database</module>
   </modules>
   <name>parent</name>
   <packaging>pom</packaging>
