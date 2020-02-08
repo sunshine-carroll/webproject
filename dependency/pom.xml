@@ -13,7 +13,7 @@
   <groupId>com.sunshine.webproject</groupId>
   <artifactId>dependency</artifactId>
   <version>1.0-SNAPSHOT</version>
-
+  <packaging>pom</packaging>
   <name>dependency</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
@@ -27,6 +27,7 @@
   </properties>
 
   <dependencies>
+
 <!--    junit 依赖-->
     <dependency>
       <groupId>junit</groupId>

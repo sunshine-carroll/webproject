@@ -26,6 +26,18 @@
   </properties>
 
   <dependencies>
+<!--    本项目依赖 start-->
+    <dependency>
+      <groupId>com.sunshine.webproject</groupId>
+      <artifactId>common</artifactId>
+      <version>${webproject.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.sunshine.webproject</groupId>
+      <artifactId>common-verify</artifactId>
+      <version>${webproject.version}</version>
+    </dependency>
+<!--    本项目依赖 end-->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
