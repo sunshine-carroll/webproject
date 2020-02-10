@@ -72,22 +72,4 @@ public interface Code {
             return message;
         }
     }
-
-    /**
-     * 业务逻辑码：对于特定业务，据有特定的码，可以按模块或类型划分
-     * 比如
-     * */
-    public enum BusinessLogicCode implements Code{
-        ;
-
-        @Override
-        public int getCode() {
-            return 0;
-        }
-
-        @Override
-        public String getMessage() {
-            return null;
-        }
-    }
 }

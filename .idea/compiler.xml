@@ -8,8 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="api" />
         <module name="common" />
-        <module name="dependency" />
         <module name="common-verify" />
+        <module name="database" />
+        <module name="service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -20,8 +21,11 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api" options="-parameters" />
       <module name="common" options="-parameters" />
+      <module name="common-verify" options="-parameters" />
+      <module name="database" options="-parameters" />
       <module name="dependency" options="-parameters" />
       <module name="modeling-computation" options="-parameters" />
+      <module name="service" options="-parameters" />
     </option>
   </component>
 </project>
