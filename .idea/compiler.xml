@@ -7,10 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="api" />
-        <module name="common" />
-        <module name="common-verify" />
         <module name="database" />
+        <module name="common" />
         <module name="service" />
+        <module name="common-verify" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

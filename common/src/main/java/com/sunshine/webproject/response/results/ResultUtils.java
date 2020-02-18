@@ -1,7 +1,6 @@
 package com.sunshine.webproject.response.results;
 
 import com.sunshine.webproject.response.Code;
-import com.sunshine.webproject.response.Result;
 import com.sunshine.webproject.response.responsecodes.CommonCode;
 import com.sunshine.webproject.response.responsecodes.HttpCode;
 
@@ -12,23 +11,31 @@ import com.sunshine.webproject.response.responsecodes.HttpCode;
  */
 public final class ResultUtils {
 
-    public static Result success(){
-        return SimpleResult.getResult(HttpCode.OK);
+    public static ResultBase success(){
+        return ResultBase.getResult(HttpCode.OK);
     }
 
-    public static Result success(Code code){
-        return SimpleResult.getResult(code);
+    public static <T> DataResult successWithData(T data){
+        DataResult<T> dataResult = new DataResult<>(data);
+        dataResult.initCode(HttpCode.OK);
+        return dataResult;
     }
 
-    public static Result failure(){
-        return SimpleResult.getResult(CommonCode.ERROR);
+
+
+    public static ResultBase successWithCustomMessage(String message){
+        return ResultBase.getResultWithCustomMessage(HttpCode.OK,message);
     }
 
-    public static Result failure(Code code){
-        return SimpleResult.getResult(HttpCode.OK);
+    public static ResultBase failure(){
+        return ResultBase.getResult(CommonCode.ERROR);
     }
 
-    public static boolean isSuccess(Result result){
+    public static ResultBase failure(Code code){
+        return ResultBase.getResult(HttpCode.OK);
+    }
+
+    public static boolean isSuccess(ResultBase result){
         return result.getCode() == 200;
     }
 }

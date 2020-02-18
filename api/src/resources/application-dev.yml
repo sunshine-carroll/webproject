@@ -1,0 +1,48 @@
+spring:
+  datasource: #数据源
+    driver-class-name: com.mysql.jdbc.Driver #driver 类名
+    url: jdbc:mysql://47.98.240.90:3306/qyerp-mms?characterEncoding=UTF-8 #数据库地址
+    username: root #用户名
+    password: 123456 #密码
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      max-active: 20 #最大连接数量
+      initial-size: 5 #初始化连接数量
+      min-idle: 5 #最小连接池大小
+      #获取连接时最大等待时间，单位毫秒。配置了maxWait之后，缺省启用公平锁，并发效率会有所下降，如果需要可以通过配置useUnfairLock属性为true使用非公平锁。
+      max-wait: 60000
+      #有两个含义：  1) Destroy线程会检测连接的间隔时间  2) testWhileIdle的判断依据
+      time-between-eviction-runs-millis: 60000 #
+      min-evictable-idle-time-millis: 300000
+      #建议配置为true，不影响性能，并且保证安全性。申请连接的时候检测，如果空闲时间大于  timeBetweenEvictionRunsMillis，执行validationQuery检测连接是否有效
+      test-while-idle: true
+      #申请连接时执行validationQuery检测连接是否有效，做了这个配置会降低性能
+      test-on-borrow: false
+      #归还连接时执行validationQuery检测连接是否有效，做了这个配置会降低性能
+      test-on-return: false
+
+## Mybatis配置
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*.xml
+  #  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.sunshine.webproject.mapper
+  global-config:
+    #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
+    id-type: 3
+    #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+    field-strategy: 2
+    #驼峰下划线转换
+    db-column-underline: false
+    #刷新mapper 调试神器
+    refresh-mapper: false
+    #数据库大写下划线转换
+    capital-mode: false
+    #序列接口实现类配置
+    #key-generator: com.baomidou.springboot.xxx
+    #逻辑删除配置
+    logic-delete-value: 1
+    logic-not-delete-value: 0
+  configuration:
+    #mapper 返回时，下划线转驼峰
+    map-underscore-to-camel-case: true
+    cache-enabled: false
