@@ -1,25 +1,23 @@
-package com.sunshine.webproject.demo;
-
-import com.sunshine.webproject.response.results.ResultBase;
-import org.springframework.stereotype.Service;
+package com.sunshine.webproject.utils;
 
 /**
  * @author: sunshine
- * @date: 2020/3/2 20:15
- * @description : demo service impl
+ * @date: 2020/3/19 14:26
+ * @description : 断言工具
  */
-@Service
-public class DemoServiceImpl implements DemoService{
+public final class Assert {
     //TODO - JavaDoc methods
 
     /*--------------------------------------------
     |             C O N S T A N T S             |
     ============================================*/
-    public ResultBase getNullResult(){
-        return null;
-    }
+    
     /*--------------------------------------------
     |                F I E L D S                 |
+    ============================================*/
+    
+    /*--------------------------------------------
+    |  A C C E S S O R S / M O D I F I E R S    |
     ============================================*/
     
     /*--------------------------------------------
