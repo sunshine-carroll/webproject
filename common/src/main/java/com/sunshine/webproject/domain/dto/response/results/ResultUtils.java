@@ -1,8 +1,8 @@
-package com.sunshine.webproject.web.domain.dto.response.results;
+package com.sunshine.webproject.domain.dto.response.results;
 
-import com.sunshine.webproject.web.domain.dto.response.Code;
-import com.sunshine.webproject.web.domain.dto.response.responsecodes.CommonCode;
-import com.sunshine.webproject.web.domain.dto.response.responsecodes.HttpCode;
+import com.sunshine.webproject.domain.dto.response.Code;
+import com.sunshine.webproject.domain.dto.response.codes.CommonCode;
+import com.sunshine.webproject.domain.dto.response.codes.HttpCode;
 
 /**
  * @author sunshine

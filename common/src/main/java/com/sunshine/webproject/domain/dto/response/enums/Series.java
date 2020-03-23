@@ -1,4 +1,4 @@
-package com.sunshine.webproject.web.domain.dto.response.enums;
+package com.sunshine.webproject.domain.dto.response.enums;
 /**
  * @author sunshine
  * @date :2020/3/21 19:04

@@ -1,4 +1,4 @@
-package com.sunshine.webproject.web.domain;
+package com.sunshine.webproject.domain;
 
 /**
  * @author sunshine
