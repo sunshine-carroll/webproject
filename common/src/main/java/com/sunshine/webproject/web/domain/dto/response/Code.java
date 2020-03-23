@@ -1,4 +1,4 @@
-package com.sunshine.webproject.response;
+package com.sunshine.webproject.web.domain.dto.response;
 
 /**
  * <p>An interface define status code</p>

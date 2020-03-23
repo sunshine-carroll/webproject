@@ -1,4 +1,4 @@
-package com.sunshine.webproject.web.entity;
+package com.sunshine.webproject.web.domain.entity;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

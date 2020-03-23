@@ -1,23 +1,17 @@
-package com.sunshine.webproject.demo;
-
-import com.sunshine.webproject.web.domain.dto.response.results.ResultBase;
-import org.springframework.stereotype.Service;
+package com.sunshine.webproject.spring.component;
 
 /**
  * @author: sunshine
- * @date: 2020/3/2 20:15
- * @description : demo service impl
+ * @date: 2020/3/2 20:08
+ * @description : 基本组件
  */
-@Service
-public class DemoServiceImpl implements DemoService{
+public class BaseComponent {
     //TODO - JavaDoc methods
 
     /*--------------------------------------------
     |             C O N S T A N T S             |
     ============================================*/
-    public ResultBase getNullResult(){
-        return null;
-    }
+    
     /*--------------------------------------------
     |                F I E L D S                 |
     ============================================*/
@@ -25,4 +19,11 @@ public class DemoServiceImpl implements DemoService{
     /*--------------------------------------------
     |               M E T H O D S               |
     ============================================*/
+    protected String getMethodExceptionInfo(String methodName){
+        return "location:"+this.getClass().getName()+"#"+methodName;
+    }
+
+    protected String getMethodExceptionInfo(String methodName,String message){
+        return this.getClass().getName()+"#"+methodName;
+    }
 }

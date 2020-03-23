@@ -1,6 +1,6 @@
-package com.sunshine.webproject.response.responsecodes;
+package com.sunshine.webproject.web.domain.dto.response.responsecodes;
 
-import com.sunshine.webproject.response.Code;
+import com.sunshine.webproject.web.domain.dto.response.Code;
 
 /**
  *Http协议中的状态码

@@ -1,6 +1,6 @@
 package com.sunshine.webproject.entity.demo;
 
-import com.sunshine.webproject.web.entity.Entity;
+import com.sunshine.webproject.web.domain.entity.Entity;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.util.Objects;

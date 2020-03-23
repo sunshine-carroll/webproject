@@ -1,6 +1,6 @@
-package com.sunshine.webproject.response.results;
+package com.sunshine.webproject.web.domain.dto.response.results;
 
-import com.sunshine.webproject.response.Code;
+import com.sunshine.webproject.web.domain.dto.response.Code;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 

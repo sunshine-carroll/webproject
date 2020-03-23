@@ -1,11 +1,15 @@
-package com.sunshine.webproject.component;
+package com.sunshine.webproject.spring.component.controller;
+
+import com.sunshine.webproject.spring.component.BaseComponent;
+import org.springframework.stereotype.Controller;
 
 /**
  * @author: sunshine
- * @date: 2020/3/2 20:08
- * @description : 基本组件
+ * @date: 2020/3/2 20:10
+ * @description :
  */
-public class BaseComponent {
+@Controller
+public class BaseController extends BaseComponent {
     //TODO - JavaDoc methods
 
     /*--------------------------------------------
@@ -19,11 +23,4 @@ public class BaseComponent {
     /*--------------------------------------------
     |               M E T H O D S               |
     ============================================*/
-    protected String getMethodExceptionInfo(String methodName){
-        return "location:"+this.getClass().getName()+"#"+methodName;
-    }
-
-    protected String getMethodExceptionInfo(String methodName,String message){
-        return this.getClass().getName()+"#"+methodName;
-    }
 }

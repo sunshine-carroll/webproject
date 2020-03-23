@@ -1,9 +1,9 @@
 package com.sunshine.webproject.api.demo;
 
-import com.sunshine.webproject.component.controller.BaseController;
+import com.sunshine.webproject.spring.component.controller.BaseController;
 import com.sunshine.webproject.demo.DemoService;
-import com.sunshine.webproject.response.results.ResultUtils;
-import com.sunshine.webproject.response.results.ResultBase;
+import com.sunshine.webproject.web.domain.dto.response.results.ResultUtils;
+import com.sunshine.webproject.web.domain.dto.response.results.ResultBase;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,17 +1,12 @@
 package com.sunshine.webproject.api.demo;
 
 import com.sunshine.webproject.entity.demo.DemoEntity;
-import com.sunshine.webproject.response.results.ResultBase;
-import com.sunshine.webproject.response.results.ResultUtils;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Optional;
 
 
 /**

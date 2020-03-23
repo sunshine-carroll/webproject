@@ -1,6 +1,6 @@
 package com.sunshine.webproject.demo;
 
-import com.sunshine.webproject.response.results.ResultBase;
+import com.sunshine.webproject.web.domain.dto.response.results.ResultBase;
 
 /**
  * @author: sunshine
