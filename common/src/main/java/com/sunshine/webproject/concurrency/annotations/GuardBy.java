@@ -1,4 +1,4 @@
-package com.sunshine.webproject.concurrency;
+package com.sunshine.webproject.concurrency.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
