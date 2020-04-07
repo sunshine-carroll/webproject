@@ -9,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
  * @description: 分页数据返回类
  */
 @ApiModel("分页数据返回类")
-public class PagingResult<T> extends DataResult<T>{
+public class PagingResult<T> extends MultipleResult<T>{
     @ApiModelProperty(name = "page",value = "页面号")
     private int page;
 

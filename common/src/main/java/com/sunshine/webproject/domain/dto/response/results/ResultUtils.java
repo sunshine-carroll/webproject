@@ -28,11 +28,11 @@ public final class ResultUtils {
     }
 
     public static ResultBase failure(){
-        return ResultBase.getResult(CommonCode.ERROR);
+        return ResultBase.getResult(CommonCode.UNDEFINED);
     }
 
     public static ResultBase failure(Code code){
-        return ResultBase.getResult(HttpCode.OK);
+        return ResultBase.getResult(code);
     }
 
     public static boolean isSuccess(ResultBase result){

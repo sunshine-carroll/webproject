@@ -3,7 +3,7 @@ package com.sunshine.webproject.domain.dto.response.codes;
 import com.sunshine.webproject.domain.dto.response.Code;
 
 public enum  CommonCode implements Code {
-    ERROR(1000,"失败"),
+    UNDEFINED(1000,"失败"),
     ;
     private final int code;
     private final String Message;
