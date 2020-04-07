@@ -9,8 +9,8 @@
         <module name="api" />
         <module name="database" />
         <module name="common" />
-        <module name="common-verify" />
         <module name="service" />
+        <module name="common-verify" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
