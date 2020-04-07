@@ -10,20 +10,20 @@ import io.swagger.annotations.ApiModelProperty;
  * @description: 简单的只包含code,message的返回结果
  */
 @ApiModel(description = "只有状态码和原因短语的返回类")
-public class ResultBase {
+public class Result {
 
-    public static ResultBase getResult(Code code){
-        ResultBase resultBase = new ResultBase();
-        resultBase.setCode(code.getCode());
-        resultBase.setMessage(code.getMessage());
-        return new ResultBase();
+    public static Result getResult(Code code){
+        Result result = new Result();
+        result.setCode(code.getCode());
+        result.setMessage(code.getMessage());
+        return new Result();
     }
 
-    public static ResultBase getResultWithCustomMessage(Code code, String message){
-        ResultBase resultBase = new ResultBase();
-        resultBase.setCode(code.getCode());
-        resultBase.setMessage(code.getMessage());
-        return new ResultBase();
+    public static Result getResultWithCustomMessage(Code code, String message){
+        Result result = new Result();
+        result.setCode(code.getCode());
+        result.setMessage(code.getMessage());
+        return new Result();
     }
 
     @ApiModelProperty(name = "code",value = "状态码",dataType = "number")

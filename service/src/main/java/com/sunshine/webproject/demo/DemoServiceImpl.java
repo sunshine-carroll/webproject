@@ -1,6 +1,6 @@
 package com.sunshine.webproject.demo;
 
-import com.sunshine.webproject.domain.dto.response.results.ResultBase;
+import com.sunshine.webproject.domain.dto.response.results.Result;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,7 +15,7 @@ public class DemoServiceImpl implements DemoService{
     /*--------------------------------------------
     |             C O N S T A N T S             |
     ============================================*/
-    public ResultBase getNullResult(){
+    public Result getNullResult(){
         return null;
     }
     /*--------------------------------------------

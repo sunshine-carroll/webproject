@@ -9,10 +9,10 @@ import com.sunshine.webproject.domain.dto.response.codes.HttpCode;
  * @date :2020/2/8 20:11
  * @description: 返回类工具
  */
-public final class ResultUtils {
+public final class Results {
 
-    public static ResultBase success(){
-        return ResultBase.getResult(HttpCode.OK);
+    public static Result success(){
+        return Result.getResult(HttpCode.OK);
     }
 
     public static <T> DataResult successWithData(T data){
@@ -23,19 +23,19 @@ public final class ResultUtils {
 
 
 
-    public static ResultBase successWithCustomMessage(String message){
-        return ResultBase.getResultWithCustomMessage(HttpCode.OK,message);
+    public static Result successWithCustomMessage(String message){
+        return Result.getResultWithCustomMessage(HttpCode.OK,message);
     }
 
-    public static ResultBase failure(){
-        return ResultBase.getResult(CommonCode.UNDEFINED);
+    public static Result failure(){
+        return Result.getResult(CommonCode.UNDEFINED);
     }
 
-    public static ResultBase failure(Code code){
-        return ResultBase.getResult(code);
+    public static Result failure(Code code){
+        return Result.getResult(code);
     }
 
-    public static boolean isSuccess(ResultBase result){
+    public static boolean isSuccess(Result result){
         return result.getCode() == 200;
     }
 }

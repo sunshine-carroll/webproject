@@ -1,6 +1,6 @@
 package com.sunshine.webproject.demo;
 
-import com.sunshine.webproject.domain.dto.response.results.ResultBase;
+import com.sunshine.webproject.domain.dto.response.results.Result;
 
 /**
  * @author: sunshine
@@ -14,5 +14,5 @@ public interface DemoService {
     /*--------------------------------------------
     |               M E T H O D S               |
     ============================================*/
-    ResultBase getNullResult();
+    Result getNullResult();
 }

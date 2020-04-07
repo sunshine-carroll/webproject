@@ -3,7 +3,7 @@ package com.sunshine.webproject.domain.dto.response.results;
 import io.swagger.annotations.ApiModel;
 
 @ApiModel("携带数据信息的返回结果")
-public class DataResult<T> extends ResultBase {
+public class DataResult<T> extends Result {
 
     public DataResult(){}
 

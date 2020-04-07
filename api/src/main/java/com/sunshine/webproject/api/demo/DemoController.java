@@ -2,8 +2,8 @@ package com.sunshine.webproject.api.demo;
 
 import com.sunshine.webproject.spring.component.controller.BaseController;
 import com.sunshine.webproject.demo.DemoService;
-import com.sunshine.webproject.domain.dto.response.results.ResultUtils;
-import com.sunshine.webproject.domain.dto.response.results.ResultBase;
+import com.sunshine.webproject.domain.dto.response.results.Results;
+import com.sunshine.webproject.domain.dto.response.results.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,15 +20,15 @@ public class DemoController extends BaseController {
     @Autowired
     DemoService baseService;
 
-    @ApiOperation(value = "hello world",notes = "hello world",response = ResultBase.class)
+    @ApiOperation(value = "hello world",notes = "hello world",response = Result.class)
     @GetMapping("helloWorld")
-    public ResultBase helloWorld(){
-        return ResultUtils.success();
+    public Result helloWorld(){
+        return Results.success();
     }
 
-    @ApiOperation(value = "nullResult",notes = "当服务层接口为实现是返回错误信息",response = ResultBase.class)
+    @ApiOperation(value = "nullResult",notes = "当服务层接口为实现是返回错误信息",response = Result.class)
     @GetMapping("nullResult")
-    public ResultBase getNullResult(){
+    public Result getNullResult(){
         return Optional.ofNullable(baseService.getNullResult()).orElseThrow(()->new NullPointerException((getMethodExceptionInfo("getNullResult"))));
     }
 
