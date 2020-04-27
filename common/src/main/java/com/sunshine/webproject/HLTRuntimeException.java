@@ -1,18 +1,16 @@
-package com.sunshine.webproject.utils;
-
-import org.springframework.beans.BeansException;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationContextAware;
-import org.springframework.stereotype.Component;
+package com.sunshine.webproject;
 
 /**
  * @author: sunshine
- * @date: 2020/3/21 18:51
- * @description : 应用程序与ApplicationContext 交互点
+ * @date: 2020/4/16 22:14
+ * @description :
  */
-@Component
-public class ApplicationContextUtil implements ApplicationContextAware {
+public class HLTRuntimeException extends RuntimeException{
     //TODO - JavaDoc methods
+
+    /*--------------------------------------------
+    |         S T A T I C M E T H O D S         |
+    ============================================*/
 
     /*--------------------------------------------
     |             C O N S T A N T S             |
@@ -21,11 +19,29 @@ public class ApplicationContextUtil implements ApplicationContextAware {
     /*--------------------------------------------
     |                F I E L D S                 |
     ============================================*/
-    private ApplicationContext applicationContext;
+    
     /*--------------------------------------------
     |            C O N S T R U C T S             |
     ============================================*/
-    
+
+    public HLTRuntimeException() {
+    }
+
+    public HLTRuntimeException(String message) {
+        super(message);
+    }
+
+    public HLTRuntimeException(String message, Throwable cause) {
+        super(message, cause);
+    }
+
+    public HLTRuntimeException(Throwable cause) {
+        super(cause);
+    }
+
+    public HLTRuntimeException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+        super(message, cause, enableSuppression, writableStackTrace);
+    }
     /*--------------------------------------------
     |  A C C E S S O R S / M O D I F I E R S    |
     ============================================*/
@@ -33,9 +49,4 @@ public class ApplicationContextUtil implements ApplicationContextAware {
     /*--------------------------------------------
     |               M E T H O D S               |
     ============================================*/
-
-    @Override
-    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        this.applicationContext = applicationContext;
-    }
 }

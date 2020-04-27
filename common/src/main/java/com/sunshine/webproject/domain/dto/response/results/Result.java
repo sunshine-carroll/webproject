@@ -1,8 +1,11 @@
 package com.sunshine.webproject.domain.dto.response.results;
 
 import com.sunshine.webproject.domain.dto.response.Code;
+import com.sunshine.webproject.domain.dto.response.codes.HttpCode;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.function.Supplier;
 
 /**
  * @author sunshine
@@ -11,20 +14,6 @@ import io.swagger.annotations.ApiModelProperty;
  */
 @ApiModel(description = "只有状态码和原因短语的返回类")
 public class Result {
-
-    public static Result getResult(Code code){
-        Result result = new Result();
-        result.setCode(code.getCode());
-        result.setMessage(code.getMessage());
-        return new Result();
-    }
-
-    public static Result getResultWithCustomMessage(Code code, String message){
-        Result result = new Result();
-        result.setCode(code.getCode());
-        result.setMessage(code.getMessage());
-        return new Result();
-    }
 
     @ApiModelProperty(name = "code",value = "状态码",dataType = "number")
     private int code;
@@ -50,5 +39,15 @@ public class Result {
     public void initCode(Code code){
         this.code = code.getCode();
         this.message = code.getMessage();
+    }
+
+    public static <T extends Result> T success(Supplier<T> supplier){
+        T result = supplier.get();
+        Results.useCode(result,HttpCode.OK);
+        return result;
+    }
+
+    public static Result success(){
+        return success(Result::new);
     }
 }

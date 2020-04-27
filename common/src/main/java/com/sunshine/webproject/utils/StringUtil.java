@@ -23,4 +23,8 @@ public final class StringUtil {
     /*--------------------------------------------
     |               M E T H O D S               |
     ============================================*/
+
+    public static boolean isNotBlank(){
+        return false;
+    }
 }

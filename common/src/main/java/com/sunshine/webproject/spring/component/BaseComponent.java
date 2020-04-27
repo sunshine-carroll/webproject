@@ -26,4 +26,12 @@ public class BaseComponent {
     protected String getMethodExceptionInfo(String methodName,String message){
         return this.getClass().getName()+"#"+methodName;
     }
+
+    protected String getClassName(){
+        return getClass().getName();
+    }
+
+    protected String getClassSimpleName(){
+        return getClass().getSimpleName();
+    }
 }

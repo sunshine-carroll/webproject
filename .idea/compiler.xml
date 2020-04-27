@@ -9,12 +9,18 @@
         <module name="api" />
         <module name="database" />
         <module name="common" />
-        <module name="common-verify" />
         <module name="service" />
+        <module name="common-verify" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="modeling-computation" target="1.7" />
+      <module name="api" target="8" />
+      <module name="common" target="8" />
+      <module name="common-verify" target="1.7" />
+      <module name="database" target="1.7" />
+      <module name="dependency" target="1.7" />
+      <module name="parent" target="1.7" />
+      <module name="service" target="1.7" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -23,8 +29,6 @@
       <module name="common" options="-parameters" />
       <module name="common-verify" options="-parameters" />
       <module name="database" options="-parameters" />
-      <module name="dependency" options="-parameters" />
-      <module name="modeling-computation" options="-parameters" />
       <module name="service" options="-parameters" />
     </option>
   </component>
