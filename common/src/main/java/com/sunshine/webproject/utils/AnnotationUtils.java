@@ -1,17 +1,11 @@
 package com.sunshine.webproject.utils;
 
-import org.springframework.beans.BeansException;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationContextAware;
-import org.springframework.stereotype.Component;
-
 /**
  * @author: sunshine
- * @date: 2020/3/21 18:51
- * @description : 应用程序与ApplicationContext 交互点
+ * @date: 2020/4/6 14:33
+ * @description : 枚举工具类
  */
-@Component
-public class ApplicationContextUtil implements ApplicationContextAware {
+public class AnnotationUtils {
     //TODO - JavaDoc methods
 
     /*--------------------------------------------
@@ -21,7 +15,7 @@ public class ApplicationContextUtil implements ApplicationContextAware {
     /*--------------------------------------------
     |                F I E L D S                 |
     ============================================*/
-    private ApplicationContext applicationContext;
+    
     /*--------------------------------------------
     |            C O N S T R U C T S             |
     ============================================*/
@@ -33,9 +27,4 @@ public class ApplicationContextUtil implements ApplicationContextAware {
     /*--------------------------------------------
     |               M E T H O D S               |
     ============================================*/
-
-    @Override
-    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        this.applicationContext = applicationContext;
-    }
 }

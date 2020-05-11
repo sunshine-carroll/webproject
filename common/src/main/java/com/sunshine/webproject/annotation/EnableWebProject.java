@@ -1,4 +1,4 @@
-package com.sunshine.webproject.annotations;
+package com.sunshine.webproject.annotation;
 
 import org.springframework.context.annotation.Import;
 
