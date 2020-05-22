@@ -11,7 +11,7 @@ import java.util.*;
  * @author: sunshine
  * @date: 2020/5/9 18:21
  */
-public class ObjectUtils {
+public class ObjectUtil {
     private static final int INITIAL_HASH = 7;
     private static final int MULTIPLIER = 31;
 

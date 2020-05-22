@@ -11,7 +11,7 @@ import java.util.*;
  * @author: sunshine
  * @date: 2020/5/9 18:15
  */
-public final class CollectionUtils {
+public final class CollectionUtil {
     //TODO - JavaDoc methods
 
     /*--------------------------------------------

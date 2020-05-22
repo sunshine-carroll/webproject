@@ -262,7 +262,7 @@ public final class Assert {
      * @throws IllegalArgumentException if the object array is {@code null} or contains no elements
      */
     public static void notEmpty(Object[] array, String message) {
-        if (ObjectUtils.isEmpty(array)) {
+        if (ObjectUtil.isEmpty(array)) {
             throw new IllegalArgumentException(message);
         }
     }
@@ -280,7 +280,7 @@ public final class Assert {
      * @since 5.0
      */
     public static void notEmpty(Object[] array, Supplier<String> messageSupplier) {
-        if (ObjectUtils.isEmpty(array)) {
+        if (ObjectUtil.isEmpty(array)) {
             throw new IllegalArgumentException(nullSafeGet(messageSupplier));
         }
     }
@@ -337,7 +337,7 @@ public final class Assert {
      * contains no elements
      */
     public static void notEmpty(Collection<?> collection, String message) {
-        if (CollectionUtils.isEmpty(collection)) {
+        if (CollectionUtil.isEmpty(collection)) {
             throw new IllegalArgumentException(message);
         }
     }
@@ -356,7 +356,7 @@ public final class Assert {
      * @since 5.0
      */
     public static void notEmpty(Collection<?> collection, Supplier<String> messageSupplier) {
-        if (CollectionUtils.isEmpty(collection)) {
+        if (CollectionUtil.isEmpty(collection)) {
             throw new IllegalArgumentException(nullSafeGet(messageSupplier));
         }
     }
@@ -412,7 +412,7 @@ public final class Assert {
      * @throws IllegalArgumentException if the map is {@code null} or contains no entries
      */
     public static void notEmpty(Map<?, ?> map, String message) {
-        if (CollectionUtils.isEmpty(map)) {
+        if (CollectionUtil.isEmpty(map)) {
             throw new IllegalArgumentException(message);
         }
     }
@@ -430,7 +430,7 @@ public final class Assert {
      * @since 5.0
      */
     public static void notEmpty(Map<?, ?> map, Supplier<String> messageSupplier) {
-        if (CollectionUtils.isEmpty(map)) {
+        if (CollectionUtil.isEmpty(map)) {
             throw new IllegalArgumentException(nullSafeGet(messageSupplier));
         }
     }
