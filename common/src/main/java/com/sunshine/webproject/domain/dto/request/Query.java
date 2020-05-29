@@ -1,20 +1,32 @@
-package com.sunshine.webproject.utils;
+package com.sunshine.webproject.domain.dto.request;
 
 /**
+ *
  * @author: sunshine
- * @date: 2020/3/19 14:25
- * @description :字符串工具类
+ * @date: 2020/5/22 17:49
+ * @see Command
  */
-public final class StringUtil {
+public class Query {
     //TODO - JavaDoc methods
+
+    
 
     /*--------------------------------------------
     |             C O N S T A N T S             |
     ============================================*/
     
     /*--------------------------------------------
+    |            C O N S T R U C T S             |
+    ============================================*/
+    
+    /*--------------------------------------------
+    |         S T A T I C M E T H O D S         |
+    ============================================*/
+    
+    /*--------------------------------------------
     |                F I E L D S                 |
     ============================================*/
+    
     
     /*--------------------------------------------
     |  A C C E S S O R S / M O D I F I E R S    |
@@ -23,17 +35,4 @@ public final class StringUtil {
     /*--------------------------------------------
     |               M E T H O D S               |
     ============================================*/
-    /**
-     * @author sunshine
-     * @date :2020/5/27 09:45
-     * @description:
-     * @return null or {@code s.trim()}
-     */
-    public static String nullSafeTrim(String s){
-        return s == null?null:s.trim();
-    }
-
-    public static boolean isNotBlank(){
-        return false;
-    }
 }
