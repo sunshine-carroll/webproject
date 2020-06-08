@@ -1,10 +1,19 @@
 package com.sunshine.webproject.domain.dto.request;
 
+import io.swagger.annotations.ApiModelProperty;
+
+import java.util.Collections;
+import java.util.List;
+
 /**
+ * 多目标命令
+ * <p>
+ *
+ * <p/>
  * @author: sunshine
- * @date: 2020/5/22 17:49
+ * @date: 2020/6/1 16:46
  */
-public class Command{
+public class BatchTargetCommand<T> {
     //TODO - JavaDoc methods
 
     
@@ -20,11 +29,15 @@ public class Command{
     /*--------------------------------------------
     |         S T A T I C M E T H O D S         |
     ============================================*/
-    
+
     /*--------------------------------------------
     |                F I E L D S                 |
     ============================================*/
-    
+    @ApiModelProperty(name = "targets",value = "操作目标集",required = true)
+    private List<T> targets = Collections.emptyList();
+
+    @ApiModelProperty(name = "strategy",value = "批量操作策略 0:at least one success;1:all success")
+    private Integer strategy;
     
     /*--------------------------------------------
     |  A C C E S S O R S / M O D I F I E R S    |

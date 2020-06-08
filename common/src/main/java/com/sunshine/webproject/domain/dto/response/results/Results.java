@@ -13,6 +13,9 @@ import com.sunshine.webproject.utils.StringUtil;
  */
 public final class Results {
 
+
+    //result 级别
+
     /**
      * @author sunshine
      * @date :2020/4/16 21:41
@@ -21,7 +24,6 @@ public final class Results {
      * @param code
      */
      static <T extends Result> void useCode(T result,Code code){
-         Assert.requireNonNull(result);
          result.setCode(code.getCode());
          result.setMessage(code.getMessage());
      }
@@ -33,7 +35,6 @@ public final class Results {
      * @param code
      */
     static <T extends Result> void useCode(T result,Code code,String message){
-        Assert.requireNonNull(result);
         result.setCode(code.getCode());
         if (true)
             result.setMessage(code.getMessage());

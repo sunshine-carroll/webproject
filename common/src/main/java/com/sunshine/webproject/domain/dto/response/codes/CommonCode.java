@@ -3,6 +3,11 @@ package com.sunshine.webproject.domain.dto.response.codes;
 import com.sunshine.webproject.domain.dto.response.Code;
 
 public enum  CommonCode implements Code {
+    /**
+     * 表示发生一个未知或者未定义的错误
+     * @author sunshine
+     * @date :2020/6/1 18:09
+     **/
     UNDEFINED(1000,"失败"),
     ;
     private final int code;
