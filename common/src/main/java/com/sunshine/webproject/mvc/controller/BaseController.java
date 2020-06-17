@@ -1,13 +1,15 @@
-package com.sunshine.webproject.spring.component.service;
+package com.sunshine.webproject.mvc.controller;
 
-import com.sunshine.webproject.spring.component.BaseComponent;
+import com.sunshine.webproject.mvc.BaseComponent;
+import org.springframework.stereotype.Controller;
 
 /**
  * @author: sunshine
- * @date: 2020/3/21 18:56
+ * @date: 2020/3/2 20:10
  * @description :
  */
-public class BaseService extends BaseComponent {
+@Controller
+public class BaseController extends BaseComponent {
     //TODO - JavaDoc methods
 
     /*--------------------------------------------
@@ -16,14 +18,6 @@ public class BaseService extends BaseComponent {
     
     /*--------------------------------------------
     |                F I E L D S                 |
-    ============================================*/
-    
-    /*--------------------------------------------
-    |            C O N S T R U C T S             |
-    ============================================*/
-    
-    /*--------------------------------------------
-    |  A C C E S S O R S / M O D I F I E R S    |
     ============================================*/
     
     /*--------------------------------------------

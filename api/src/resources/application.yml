@@ -3,10 +3,11 @@ server:
     uri-encoding: UTF-8
   port: 8080
   context-path: /
-
 spring:
   profiles:
     active:
       - dev
-    mvc:
-      static-path-pattern: /**
+  mvc:
+    static-path-pattern: /**
+  resources:
+    static-locations: file:${upload.localtion.linux},file:${upload.localtion.windows}

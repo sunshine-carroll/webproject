@@ -1,8 +1,7 @@
 package com.sunshine.webproject.api.demo;
 
-import com.sunshine.webproject.spring.component.controller.BaseController;
+import com.sunshine.webproject.mvc.controller.BaseController;
 import com.sunshine.webproject.demo.DemoService;
-import com.sunshine.webproject.domain.dto.response.results.Results;
 import com.sunshine.webproject.domain.dto.response.results.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

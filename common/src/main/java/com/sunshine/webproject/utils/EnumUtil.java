@@ -45,21 +45,6 @@ public final class EnumUtil {
         return enumClazz.getEnumConstants()[ordinal];
     }
 
-    /**
-     * @author sunshine
-     * @date :2020/3/21 16:59
-     * @param enumClazz a class with a generic parameter extend from Enum<E>
-     * @param enumName the name of enum
-     * @return {@code null} or a enum instance of enumClazz which the name equals the param "enumName"
-     * @throws IllegalArgumentException if enumClazz not instance of Enum<E>
-     */
-    public static <T extends Enum> T getEnum(Class<T> enumClazz,String enumName){
-        T[] enums = enumClazz.getEnumConstants();
-        for(T t:enums){
-            if(Objects.equals(t.name(),StringUtil.nullSafeTrim(enumName)))
-                return t;
-        }
-        return null;
-    }
+
 
 }

@@ -1,4 +1,4 @@
-package com.sunshine.webproject;
+package com.sunshine.webproject.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

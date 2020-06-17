@@ -1,25 +1,29 @@
-package com.sunshine.webproject.demo;
+package com.sunshine.webproject.mvc.service;
 
-import com.sunshine.webproject.domain.dto.response.results.Result;
-import org.springframework.stereotype.Service;
+import com.sunshine.webproject.mvc.BaseComponent;
 
 /**
  * @author: sunshine
- * @date: 2020/3/2 20:15
- * @description : demo service impl
+ * @date: 2020/3/21 18:56
+ * @description :
  */
-@Service
-public class DemoServiceImpl implements DemoService{
+public class BaseService extends BaseComponent {
     //TODO - JavaDoc methods
 
     /*--------------------------------------------
     |             C O N S T A N T S             |
     ============================================*/
-    public Result getNullResult(){
-        return null;
-    }
+    
     /*--------------------------------------------
     |                F I E L D S                 |
+    ============================================*/
+    
+    /*--------------------------------------------
+    |            C O N S T R U C T S             |
+    ============================================*/
+    
+    /*--------------------------------------------
+    |  A C C E S S O R S / M O D I F I E R S    |
     ============================================*/
     
     /*--------------------------------------------

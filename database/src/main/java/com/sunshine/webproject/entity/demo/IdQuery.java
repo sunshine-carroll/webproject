@@ -1,17 +1,17 @@
-package com.sunshine.webproject.utils;
+package com.sunshine.webproject.entity.demo;
 
-import com.github.pagehelper.PageHelper;
-import com.sunshine.webproject.domain.dto.request.PagingQuery;
-import com.sunshine.webproject.log.Logger;
-import com.sunshine.webproject.log.LoggerFactory;
+import com.sunshine.webproject.spring.constraints.RequireUUID;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
 /**
  * @author: sunshine
- * @date: 2020/5/22 17:50
+ * @date: 2020/6/17 10:39
  */
-public class PageUtil {
+@ApiModel
+public class IdQuery {
     //TODO - JavaDoc methods
-    public static final Logger logger = LoggerFactory.getLogger(PageUtil.class);
+
     
 
     /*--------------------------------------------
@@ -29,27 +29,22 @@ public class PageUtil {
     /*--------------------------------------------
     |                F I E L D S                 |
     ============================================*/
-    
+    @RequireUUID(message = "需要 time-based uuid",version = 1)
+    @ApiModelProperty(name = "id",value = "id",dataType = "String")
+    private String id;
     
     /*--------------------------------------------
     |  A C C E S S O R S / M O D I F I E R S    |
     ============================================*/
-    
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
     /*--------------------------------------------
     |               M E T H O D S               |
     ============================================*/
-    public static void startPage(PagingQuery query){
-        if (query.getQueryAll()){
-            query.setPageSize(0);
-        }
-        PageHelper.startPage(query.getPage(),query.getPageSize(),false,false,query.getQueryAll());
-    }
-
-    public void setPage(){
-
-    }
-
-    public void clear(){
-        PageHelper.clearPage();
-    }
 }

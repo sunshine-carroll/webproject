@@ -1,4 +1,4 @@
-package com.sunshine.webproject.spring.component;
+package com.sunshine.webproject.mvc;
 
 /**
  * @author: sunshine

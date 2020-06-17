@@ -1,27 +1,30 @@
-package com.sunshine.webproject.utils;
+package com.sunshine.webproject.spring.constraints.support;
 
-import com.github.pagehelper.PageHelper;
-import com.sunshine.webproject.domain.dto.request.PagingQuery;
-import com.sunshine.webproject.log.Logger;
-import com.sunshine.webproject.log.LoggerFactory;
+import com.sunshine.webproject.spring.constraints.TestInstance;
+
+import javax.validation.ConstraintValidator;
+import javax.validation.ConstraintValidatorContext;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author: sunshine
- * @date: 2020/5/22 17:50
+ * @date: 2020/6/17 09:43
  */
-public class PageUtil {
+public class TestInstanceValidator implements ConstraintValidator<TestInstance,String> {
     //TODO - JavaDoc methods
-    public static final Logger logger = LoggerFactory.getLogger(PageUtil.class);
+
     
 
     /*--------------------------------------------
     |             C O N S T A N T S             |
     ============================================*/
-    
+    private static final AtomicInteger integer = new AtomicInteger(0);
     /*--------------------------------------------
     |            C O N S T R U C T S             |
     ============================================*/
-    
+    public TestInstanceValidator(){
+        System.out.println(integer.incrementAndGet());
+    }
     /*--------------------------------------------
     |         S T A T I C M E T H O D S         |
     ============================================*/
@@ -29,7 +32,7 @@ public class PageUtil {
     /*--------------------------------------------
     |                F I E L D S                 |
     ============================================*/
-    
+    private  TestInstance instance;
     
     /*--------------------------------------------
     |  A C C E S S O R S / M O D I F I E R S    |
@@ -38,18 +41,16 @@ public class PageUtil {
     /*--------------------------------------------
     |               M E T H O D S               |
     ============================================*/
-    public static void startPage(PagingQuery query){
-        if (query.getQueryAll()){
-            query.setPageSize(0);
-        }
-        PageHelper.startPage(query.getPage(),query.getPageSize(),false,false,query.getQueryAll());
+
+    @Override
+    public boolean isValid(String value, ConstraintValidatorContext context) {
+        return true;
     }
 
-    public void setPage(){
-
-    }
-
-    public void clear(){
-        PageHelper.clearPage();
+    @Override
+    public void initialize(TestInstance constraintAnnotation) {
+        System.out.println("field: "+instance);
+        System.out.println("param: "+constraintAnnotation);
+        this.instance = constraintAnnotation;
     }
 }

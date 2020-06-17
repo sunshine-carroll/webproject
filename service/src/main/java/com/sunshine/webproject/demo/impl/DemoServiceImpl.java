@@ -1,21 +1,24 @@
-package com.sunshine.webproject.spring.component.controller;
+package com.sunshine.webproject.demo.impl;
 
-import com.sunshine.webproject.spring.component.BaseComponent;
-import org.springframework.stereotype.Controller;
+import com.sunshine.webproject.demo.DemoService;
+import com.sunshine.webproject.domain.dto.response.results.Result;
+import org.springframework.stereotype.Service;
 
 /**
  * @author: sunshine
- * @date: 2020/3/2 20:10
- * @description :
+ * @date: 2020/3/2 20:15
+ * @description : demo service impl
  */
-@Controller
-public class BaseController extends BaseComponent {
+@Service
+public class DemoServiceImpl implements DemoService {
     //TODO - JavaDoc methods
 
     /*--------------------------------------------
     |             C O N S T A N T S             |
     ============================================*/
-    
+    public Result getNullResult(){
+        return null;
+    }
     /*--------------------------------------------
     |                F I E L D S                 |
     ============================================*/

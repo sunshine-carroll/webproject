@@ -1,9 +1,9 @@
 spring:
   datasource: #数据源
     driver-class-name: com.mysql.jdbc.Driver #driver 类名
-    url: jdbc:mysql://localhost:3306/qyerp-mms1?characterEncoding=UTF-8 #数据库地址
+    url: jdbc:mysql://47.98.240.90:3306/qyerp-mms1?characterEncoding=UTF-8 #数据库地址
     username: root #用户名
-    password: sunshine1997 #密码
+    password: 123Abc+- #密码
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       max-active: 20 #最大连接数量
@@ -53,4 +53,4 @@ mybatis-plus:
     map-underscore-to-camel-case: true
     cache-enabled: false
 mybatis:
-  config-location: classpath:mybatis/mybatis-dev.xml
+  config-location: classpath:mybatis/mybatis-prod.xml

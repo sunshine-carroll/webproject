@@ -22,4 +22,5 @@ public class DataResult<T> extends Result {
     public void setData(T data) {
         this.data = data;
     }
+
 }
