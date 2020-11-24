@@ -1,5 +1,6 @@
 package com.sunshine.webproject.api.demo;
 
+import com.sunshine.webproject.domain.dto.response.results.Results;
 import com.sunshine.webproject.mvc.controller.BaseController;
 import com.sunshine.webproject.demo.DemoService;
 import com.sunshine.webproject.domain.dto.response.results.Result;
@@ -22,7 +23,7 @@ public class DemoController extends BaseController {
     @ApiOperation(value = "hello world",notes = "hello world",response = Result.class)
     @GetMapping("helloWorld")
     public Result helloWorld(){
-        return Result.success();
+        return Results.success();
     }
 
     @ApiOperation(value = "nullResult",notes = "当服务层接口为实现是返回错误信息",response = Result.class)

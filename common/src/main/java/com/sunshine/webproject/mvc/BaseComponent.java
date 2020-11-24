@@ -1,9 +1,9 @@
 package com.sunshine.webproject.mvc;
 
 /**
+ * 用于添加公共的代码，不管是controller的还是Service的
  * @author: sunshine
  * @date: 2020/3/2 20:08
- * @description : 基本组件
  */
 public class BaseComponent {
     //TODO - JavaDoc methods

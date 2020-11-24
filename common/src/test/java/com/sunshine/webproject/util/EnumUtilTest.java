@@ -1,8 +1,11 @@
 package com.sunshine.webproject.util;
 
+import com.sunshine.webproject.concurrency.annotations.GuardBy;
 import com.sunshine.webproject.utils.EnumUtil;
 import org.junit.Assert;
 import org.junit.Test;
+
+import java.lang.annotation.Annotation;
 
 /**
  * @author: sunshine
@@ -31,5 +34,29 @@ public class EnumUtilTest {
         Assert.assertEquals(day,Day.FRIDAY);
         day = EnumUtil.getEnum(Day.class,6);
         Assert.assertEquals(day,Day.SATURDAY);
+    }
+
+    @Test
+    public void test(){
+        String s="/a11/b1%#/../c/./d";
+        String rex = "/[\\d\\w\\%\\#]*/\\.\\.";
+        String rex1="/\\.";
+        String a=s.replaceAll(rex,"");
+        String b=a.replaceAll(rex1,"");
+        System.out.println(b);
+    }
+
+    class test implements GuardBy{
+
+        private String description;
+        @Override
+        public String description() {
+            return description;
+        }
+
+        @Override
+        public Class<? extends Annotation> annotationType() {
+            return GuardBy.class;
+        }
     }
 }

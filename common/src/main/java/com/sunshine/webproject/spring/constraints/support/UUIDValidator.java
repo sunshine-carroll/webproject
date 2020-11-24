@@ -1,13 +1,12 @@
 package com.sunshine.webproject.spring.constraints.support;
 
-import com.sunshine.webproject.spring.constraints.RequireUUID;
+import com.sunshine.webproject.spring.constraints.UUID;
 import com.sunshine.webproject.log.Logger;
 import com.sunshine.webproject.log.LoggerFactory;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 import java.util.Objects;
-import java.util.UUID;
 
 /**
  * UUID验证器
@@ -15,7 +14,7 @@ import java.util.UUID;
  * @author: sunshine
  * @date: 2020/6/16 09:34
  */
-public class UUIDValidator implements ConstraintValidator<RequireUUID,String> {
+public class UUIDValidator implements ConstraintValidator<UUID,String> {
     //TODO - JavaDoc methods
 
     
@@ -35,12 +34,12 @@ public class UUIDValidator implements ConstraintValidator<RequireUUID,String> {
     /*--------------------------------------------
     |                F I E L D S                 |
     ============================================*/
-    protected RequireUUID constraintAnnotation;
+    protected UUID constraintAnnotation;
 
     @Override
     public boolean isValid(String value, ConstraintValidatorContext context) {
         try {
-            UUID uuid = UUID.fromString(value);
+            java.util.UUID uuid = java.util.UUID.fromString(value);
             boolean isValid = checkVersion(uuid);
             return isValid;
         }catch (IllegalArgumentException e){
@@ -48,20 +47,20 @@ public class UUIDValidator implements ConstraintValidator<RequireUUID,String> {
         }
     }
 
-    private boolean checkVersion(UUID uuid){
-        RequireUUID constraintAnnotation = getConstraintAnnotation();
+    private boolean checkVersion(java.util.UUID uuid){
+        UUID constraintAnnotation = getConstraintAnnotation();
         return constraintAnnotation.version() == -1?true:Objects.equals(uuid.version(),constraintAnnotation.version());
     }
 
     @Override
-    public void initialize(RequireUUID constraintAnnotation) {
+    public void initialize(UUID constraintAnnotation) {
         this.constraintAnnotation = constraintAnnotation;
     }
     /*--------------------------------------------
     |  A C C E S S O R S / M O D I F I E R S    |
     ============================================*/
 
-    public RequireUUID getConstraintAnnotation() {
+    public UUID getConstraintAnnotation() {
         return constraintAnnotation;
     }
     /*--------------------------------------------

@@ -1,15 +1,18 @@
-package com.sunshine.webproject.entity.demo;
+package com.sunshine.webproject.utils.date;
 
-import com.sunshine.webproject.spring.constraints.UUID;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import java.text.SimpleDateFormat;
 
 /**
- * @author: sunshine
- * @date: 2020/6/17 10:39
+ * <b>info:<b/>
+ * <ul>
+ *     <li>create_time:2020/8/25 15:18</li>
+ * <ul/>
+ * <p>
+ *     日期格式化工具类
+ * </p>
+ * @author sunshine
  */
-@ApiModel
-public class IdQuery {
+public final class DateFormatUtil {
     //TODO - JavaDoc methods
 
     
@@ -25,25 +28,26 @@ public class IdQuery {
     /*--------------------------------------------
     |         S T A T I C M E T H O D S         |
     ============================================*/
-    
+    public void dateFormat(String date){
+
+    }
+
+    public void dateFormat(String date,String format){
+
+    }
+
+    public void dateFormat(String date,SimpleDateFormat format){
+
+    }
     /*--------------------------------------------
     |                F I E L D S                 |
     ============================================*/
-    @UUID(message = "需要 time-based uuid",version = 1)
-    @ApiModelProperty(name = "id",value = "id",dataType = "String")
-    private String id;
+    
     
     /*--------------------------------------------
     |  A C C E S S O R S / M O D I F I E R S    |
     ============================================*/
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
+    
     /*--------------------------------------------
     |               M E T H O D S               |
     ============================================*/

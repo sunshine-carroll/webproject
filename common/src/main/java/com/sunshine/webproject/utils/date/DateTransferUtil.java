@@ -1,15 +1,12 @@
-package com.sunshine.webproject.entity.demo;
-
-import com.sunshine.webproject.spring.constraints.UUID;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+package com.sunshine.webproject.utils.date;
 
 /**
+ * 日期转换工具类<br/>
+ * 提供{@link java.util.Date},{@link String},{@link Number}之间的日期转换
  * @author: sunshine
- * @date: 2020/6/17 10:39
+ * @date: 2020/8/25 16:12
  */
-@ApiModel
-public class IdQuery {
+public class DateTransferUtil {
     //TODO - JavaDoc methods
 
     
@@ -29,21 +26,12 @@ public class IdQuery {
     /*--------------------------------------------
     |                F I E L D S                 |
     ============================================*/
-    @UUID(message = "需要 time-based uuid",version = 1)
-    @ApiModelProperty(name = "id",value = "id",dataType = "String")
-    private String id;
+    
     
     /*--------------------------------------------
     |  A C C E S S O R S / M O D I F I E R S    |
     ============================================*/
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
+    
     /*--------------------------------------------
     |               M E T H O D S               |
     ============================================*/

@@ -33,7 +33,7 @@ public final class StringUtil {
         return s == null?null:s.trim();
     }
 
-    public static boolean isNotBlank(){
+    public static boolean isNotBlank(String s){
         return false;
     }
 }

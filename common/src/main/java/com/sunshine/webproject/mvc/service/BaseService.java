@@ -3,9 +3,9 @@ package com.sunshine.webproject.mvc.service;
 import com.sunshine.webproject.mvc.BaseComponent;
 
 /**
+ * 用于添加公共的Service层代码
  * @author: sunshine
  * @date: 2020/3/21 18:56
- * @description :
  */
 public class BaseService extends BaseComponent {
     //TODO - JavaDoc methods

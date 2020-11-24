@@ -8,7 +8,7 @@ public enum  CommonCode implements Code {
      * @author sunshine
      * @date :2020/6/1 18:09
      **/
-    UNDEFINED(1000,"失败"),
+    UNDEFINED(1000,"未定义的错误"),
     ;
     private final int code;
     private final String Message;
